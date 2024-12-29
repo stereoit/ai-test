@@ -1,4 +1,17 @@
 {
     "IDX.aI.enableInlineCompletion": true,
-    "IDX.aI.enableCodebaseIndexing": true
+    "IDX.aI.enableCodebaseIndexing": true,
+    "go.inferGopath": true,
+    "launch": {
+        "configurations": [
+            {
+                "name": "Launch Package",
+                "type": "go",
+                "request": "launch",
+                "mode": "debug",
+                "program": "${workspaceFolder}/backend/main.go",
+                "args": ["-port", "8080"] 
+            }
+        ]
+    }
 }
