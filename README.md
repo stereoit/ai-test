@@ -10,15 +10,21 @@ This section outlines the steps for building and running the backend application
 
 1. **Navigate to the backend directory:**
 
+    ```bash
+    cd backend
+    ```
+
 2. **run the compile command**
 
-`go run main.go`
+    ```bash
+    $go run main.go
+    ```
 
 3. Test the app using curl command:
 
-```
-$ curl localhost:8080
-```
+    ```bash
+    $ curl localhost:8080
+    ```
 
 ## Developing the Frontend Application
 
@@ -35,8 +41,13 @@ The application is build using Svelte 5 and material design.
     ```bash
     npm install
     ```
+3.  **Update the CSS:**
 
-3.  **Start the development server:**
+    ```bash
+    npm run prepare
+    ```
+
+4.  **Start the development server:**
 
     ```bash
     npm run dev
