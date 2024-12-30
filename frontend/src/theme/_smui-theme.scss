@@ -1,7 +1,6 @@
 @use 'sass:color';
 
 @use '@material/theme/color-palette';
-// @use '@material/typography/index' as typography;
 
 // Svelte Colors!
 @use '@material/theme/index' as theme with (
@@ -12,10 +11,14 @@
   $error: color-palette.$red-900
 );
 
+// add material design typography
+@use '@material/typography/index' as typography;
+
 html,
 body {
   background-color: theme.$surface;
   color: theme.$on-surface;
+  // font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -25,56 +28,51 @@ a:visited {
   color: color.scale(#40b3ff, $lightness: -35%);
 }
 
+html {
+  @include typography.typography('body1');
+}
+h1 {
+  @include typography.typography('headline1');
+}
 
-// material typography
-// Import the mixins.
+h2 {
+  @include typography.typography('headline2');
+}
 
-// html {
-//   @include typography.typography('body1');
-// }
+h3 {
+  @include typography.typography('headline3');
+}
 
-// h1 {
-//   @include typography.typography('headline1');
-// }
+h4 {
+  @include typography.typography('headline4');
+}
 
-// h2 {
-//   @include typography.typography('headline2');
-// }
+h5 {
+  @include typography.typography('headline5');
+}
 
-// h3 {
-//   @include typography.typography('headline3');
-// }
+h6 {
+  @include typography.typography('headline6');
+}
 
-// h4 {
-//   @include typography.typography('headline4');
-// }
+caption {
+  @include typography.typography('caption');
+}
 
-// h5 {
-//   @include typography.typography('headline5');
-// }
+code,
+pre {
+  font-family: 'Roboto Mono', monospace;
+}
 
-// h6 {
-//   @include typography.typography('headline6');
-// }
+small {
+  font-size: 0.9em;
+}
 
-// caption {
-//   @include typography.typography('caption');
-// }
+big {
+  font-size: 1.1em;
+}
 
-// code,
-// pre {
-//   font-family: 'Roboto Mono', monospace;
-// }
-
-// small {
-//   font-size: 0.9em;
-// }
-
-// big {
-//   font-size: 1.1em;
-// }
-
-// b,
-// strong {
-//   font-weight: bold;
-// }
+b,
+strong {
+  font-weight: bold;
+}

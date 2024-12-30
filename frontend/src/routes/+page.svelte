@@ -3,8 +3,8 @@
     import Button from '@smui/button';
 </script>
 
-<h1>Welcome to Phones</h1>
+<h1>Phones</h1>
 
 <Menu />
 
-<Button>Nazdar</Button>
+<Button onclick={() => alert('It worked!')}>Click me!</Button>
