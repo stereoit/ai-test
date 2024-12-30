@@ -1,4 +1,5 @@
 
+
 <script lang="ts">
   import { onMount } from 'svelte';
   import TopAppBar, {
@@ -10,12 +11,15 @@
   import IconButton, {Icon} from '@smui/icon-button';
   import {mdiAccount, mdiWeatherSunny, mdiWeatherNight} from '@mdi/js';
   import {Svg} from '@smui/common';
+  import { mdiMenu } from '@mdi/js';
+  import Drawer from '$lib/Drawer.svelte';
+
   let { children } = $props();
-  
   let topAppBar: TopAppBar | null = $state(null);
   let darkTheme: boolean | undefined = $state(0);
+  let isMenuOpen: boolean = $state(false);
 
-  onMount(()=> {
+  onMount(() => {
     darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
   })
 </script>
@@ -36,14 +40,14 @@
 
 <TopAppBar bind:this={topAppBar} variant="standard">
   <Row>
-    <Section>
-      <IconButton class="material-icons">menu</IconButton>
+    <Section onclick={() => isMenuOpen = !isMenuOpen}>
+      <IconButton><Icon tag="svg" viewBox="0 0 24 24"><path fill="currentColor" d={mdiMenu} /></Icon></IconButton>
       <Title>Phones</Title>
     </Section>
     <Section align="end" toolbar>
       <IconButton onclick={() => darkTheme = !darkTheme} title={darkTheme ? 'Lights on.' : 'Lights off.'}>
         <Icon tag="svg" viewBox="0 0 24 24">
-            <path fill="currentColor" d={darkTheme ? mdiWeatherNight : mdiWeatherSunny} />
+          <path fill="currentColor" d={darkTheme ? mdiWeatherNight : mdiWeatherSunny} />
         </Icon>
       </IconButton>
       
@@ -51,7 +55,10 @@
   </Row>
 </TopAppBar>
 
+<Drawer open={isMenuOpen}/>
 
 <AutoAdjust {topAppBar}>
-    {@render children?.()}
+  {@render children?.()}
 </AutoAdjust>
+
+
