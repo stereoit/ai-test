@@ -13,7 +13,6 @@
 </TopAppBar>
 <AutoAdjust {topAppBar}>
   <h5>Short, Always Collapsed</h5>
-  <LoremIpsum />
   <div>This is page content</div>
 </AutoAdjust>
 
@@ -25,19 +24,6 @@
     AutoAdjust,
   } from '@smui/top-app-bar';
   import IconButton from '@smui/icon-button';
-  import LoremIpsum from '$lib/LoremIpsum.svelte';
 
   let topAppBar: TopAppBar | null = $state(null);
 </script>
-
-<style>
-  /* Hide everything above this component. */
-  :global(#smui-app),
-  :global(body),
-  :global(html) {
-    display: block !important;
-    height: auto !important;
-    width: auto !important;
-    position: static !important;
-  }
-</style>

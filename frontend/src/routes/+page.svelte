@@ -3,8 +3,8 @@
     import Button from '@smui/button';
 </script>
 
-<h1>Phones</h1>
 
 <Menu />
+<h1>Phones</h1>
 
-<Button onclick={() => alert('It worked!')}>Click me!</Button>
+<p>Tato aplikace slouží pro správu telefonů ve firma AURES ICT</p>
