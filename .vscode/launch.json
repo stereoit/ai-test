@@ -28,7 +28,7 @@
             "request": "launch",
             "name": "Launch Frontend",
             "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}/frontend/phones-fe",
+            "webRoot": "${workspaceFolder}/frontend",
             "runtimeArgs": ["--remote-debugging-port=9222"],
             "preLaunchTask": "frontend:dev"
         }

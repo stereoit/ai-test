@@ -14,14 +14,14 @@
             },
             {
                 "name": "Launch Frontend",
-                "type": "pwa-node",
+                "type": "node",
                 "request": "launch",
                 "runtimeExecutable": "node",
                 "runtimeArgs": [
                     "/usr/local/bin/vite",
                     "dev"
                 ],
-                "cwd": "${workspaceFolder}/frontend/phones-fe"
+                "cwd": "${workspaceFolder}/frontend"
             }
         ]
     }
