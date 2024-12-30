@@ -25,10 +25,9 @@
               "run",
               "dev",
               "--",
-              "open"
+              "--open"
             ],
-            "cwd": "${workspaceFolder}/frontend",
-            "port": 9229
+            "cwd": "${workspaceFolder}/frontend"
         }
     ]
 }
