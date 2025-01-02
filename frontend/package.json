@@ -27,6 +27,7 @@
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"autoprefixer": "^10.4.20",
 		"postcss": "^8.4.49",
+		"postcss-cli": "^11.0.0",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
 		"smui-theme": "^8.0.0-beta.3",
