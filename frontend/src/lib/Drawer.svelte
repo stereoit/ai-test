@@ -24,6 +24,9 @@
       <Item href="/phones">
         <Text>Phones</Text>
       </Item>
+      <Item href="/test-petr">
+        <Text>Test Petr</Text>
+      </Item>
     </List>
   </Content>
 </Drawer>
