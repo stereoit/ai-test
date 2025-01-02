@@ -16,7 +16,7 @@
 
   let { children } = $props();
   let topAppBar: TopAppBar | null = $state(null);
-  let darkTheme: boolean | undefined = $state(0);
+  let darkTheme: boolean | undefined = $state(false);
   let isMenuOpen: boolean = $state(false);
 
   onMount(() => {
